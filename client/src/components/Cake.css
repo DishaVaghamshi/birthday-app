@@ -1,0 +1,52 @@
+/* Balloon animation */
+@keyframes balloonUp {
+  0% { transform: translateY(0); opacity: 1; }
+  80% { opacity: 1; }
+  100% { transform: translateY(-110vh); opacity: 0; }
+}
+
+/* Cake SVG entrance */
+@keyframes cakeBounceIn {
+  0% { transform: scale(0.7) translateY(80px); opacity: 0; }
+  60% { transform: scale(1.1) translateY(-10px); opacity: 1; }
+  80% { transform: scale(0.95) translateY(5px);}
+  100% { transform: scale(1) translateY(0);}
+}
+
+/* Cake glow */
+@keyframes cakeGlow {
+  0% { filter: drop-shadow(0 0 8px #ffe5ec);}
+  100% { filter: drop-shadow(0 0 32px #ffd6e0);}
+}
+.cake-glow {
+  filter: drop-shadow(0 0 24px #ffe5ec);
+  animation: cakeGlow 2s infinite alternate;
+}
+
+/* Candle flames flicker */
+@keyframes flameFlicker {
+  0% { transform: scaleY(1) scaleX(1); opacity: 1; }
+  40% { transform: scaleY(1.15) scaleX(0.95) translateY(-2px); opacity: 0.92; }
+  60% { transform: scaleY(0.95) scaleX(1.05) translateY(1px); opacity: 1; }
+  100% { transform: scaleY(1) scaleX(1); opacity: 1; }
+}
+.flame-flicker {
+  animation: flameFlicker 1.1s infinite alternate;
+}
+.flame-flicker.delay1 {
+  animation-delay: 0.3s;
+  animation-duration: 1.3s;
+}
+.flame-flicker.delay2 {
+  animation-delay: 0.6s;
+  animation-duration: 1.2s;
+}
+
+/* Sprinkles twinkle */
+@keyframes twinkle {
+  0% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+.twinkle {
+  animation: twinkle 1.5s infinite alternate;
+}
